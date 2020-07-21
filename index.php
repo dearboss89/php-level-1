@@ -1,24 +1,31 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<?php
+$title = "minimalistica";
+$date = date('Y');
+$list = '<ul id="menu">';
+$list .= '<li><a href="#">home</a></li>';
+$list .= '<li><a href="#">archive</a></li>';
+$list .= '<li><a href="#">contact</a></li>';
+$list .= '</ul>';
+
+?>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 	<meta name="author" content="Luka Cvrk (www.solucija.com)" />
 	<link rel="stylesheet" href="css/main.css" type="text/css" />
-	<title>minimalistica</title>
+	<title><?= $title?></title>
 </head>
 <body>
-<?php
-	echo "Hello, world";
-?>
 	<div id="content">
 		<h1></h1>
-		
-		<ul id="menu">
+		<?= $list?>
+	<!--	<ul id="menu">
 			<li><a href="#">home</a></li>
 			<li><a href="#">archive</a></li>
 			<li><a href="#">contact</a></li>
 		</ul>
-	
+	-->
 		<div class="post">
 			<div class="details">
 				<h2><a href="#">Nunc commodo euismod massa quis vestibulum</a></h2>
@@ -48,8 +55,8 @@
 		</div>
 		
 		<div id="footer">
-		      <?= date('Y')?>
-			<p>Copyright &copy; <em>minimalistica</em> &middot; Design: Luka Cvrk, <a href="http://www.solucija.com/" title="Free CSS Templates">Solucija</a></p>
+		      <?= $date?>
+			<p>Copyright &copy; <em><?= $title?></em> &middot; Design: Luka Cvrk, <a href="http://www.solucija.com/" title="Free CSS Templates">Solucija</a></p>
 		</div>	
 	</div>
 </body>
