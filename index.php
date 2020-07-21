@@ -7,6 +7,9 @@
 	<title>minimalistica</title>
 </head>
 <body>
+<?php
+	echo "Hello, world";
+?>
 	<div id="content">
 		<h1></h1>
 		
